@@ -18,7 +18,7 @@ if st.button("PUCHO"):
     else:
         with st.spinner("Soach rahi hu..."):
             try:
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
                 res = requests.post(url, json={"contents": [{"parts": [{"text": sawal}]}]})
                 data = res.json()
                 if "error" in data:
